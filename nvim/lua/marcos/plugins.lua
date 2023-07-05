@@ -33,16 +33,16 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
   use 'wbthomason/packer.nvim' -- Have packer manage itself
-
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
 
+  -- fuzzy search
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- color schemes
   use({
     "catppuccin/nvim",
     as = "catppuccin",
@@ -51,6 +51,18 @@ return packer.startup(function(use)
 	  end
   })
 
+  -- cmp plugins
+  use "hrsh7th/nvim-cmp" -- the completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+
+  -- snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
+  -- syntax parsing
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   

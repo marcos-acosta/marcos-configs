@@ -8,6 +8,7 @@ vim.g.localleader = "\\"
 
 -- IMPORTS
 require('marcos.plugins')
-require('marcos.opts')
+require('marcos.options')
 require('marcos.keymaps')
+require('marcos.completion')
 
