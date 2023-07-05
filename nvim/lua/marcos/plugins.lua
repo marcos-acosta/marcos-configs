@@ -55,7 +55,6 @@ return packer.startup(function(use)
   use "hrsh7th/nvim-cmp" -- the completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
 
   -- snippets
@@ -63,9 +62,25 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- syntax parsing
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use('nvim-treesitter/playground')
-  
+  use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
+  use("nvim-treesitter/playground")
+
+  -- package installing
+  use {
+    "williamboman/mason.nvim",
+    run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+  }
+
+  -- LSP
+  use "neovim/nvim-lspconfig"
+  use "williamboman/mason-lspconfig"
+
+  -- linting
+  use "mfussenegger/nvim-lint"
+
+  -- formatting
+  use "jose-elias-alvarez/null-ls.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
