@@ -7,8 +7,7 @@ vim.g.mapleader = " "
 vim.g.localleader = "\\"
 
 -- IMPORTS
-require('marcos.plugins')
-require('marcos.options')
-require('marcos.keymaps')
-require('marcos.completion')
-
+require("marcos.plugins")
+require("marcos.options")
+require("marcos.keymaps")
+require("marcos.completion")
