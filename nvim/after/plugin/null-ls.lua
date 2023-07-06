@@ -4,9 +4,14 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
   sources = {
+    -- formatters
     null_ls.builtins.formatting.stylua,
     null_ls.builtins.formatting.black,
     null_ls.builtins.formatting.prettier,
+    -- linters
+    null_ls.builtins.diagnostics.pylint,
+    null_ls.builtins.diagnostics.eslint_d,
+    null_ls.builtins.diagnostics.vale,
   },
   -- you can reuse a shared lspconfig on_attach callback here
   on_attach = function(client, bufnr)

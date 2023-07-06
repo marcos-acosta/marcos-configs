@@ -76,10 +76,7 @@ return packer.startup(function(use)
   use("neovim/nvim-lspconfig")
   use("williamboman/mason-lspconfig")
 
-  -- linting
-  -- use "mfussenegger/nvim-lint"
-
-  -- formatting
+  -- formatting / linting
   use("jose-elias-alvarez/null-ls.nvim")
 
   -- braces / quotes / tags
