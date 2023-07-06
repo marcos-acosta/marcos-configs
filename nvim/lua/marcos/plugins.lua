@@ -82,6 +82,15 @@ return packer.startup(function(use)
   -- formatting
   use("jose-elias-alvarez/null-ls.nvim")
 
+  -- braces / quotes / tags
+  use("tpope/vim-surround")
+  use({
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup({})
+    end,
+  })
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
