@@ -1,15 +1,26 @@
 # CONSTANTS
-
 CONFIG_DIR=~/.config
 ALIASES_PATH=~/.config/zsh/scripts/aliases.sh
 
 # FILESYSTEM
-
 alias h="cd ~/h"
 alias downloads="cd ~/Downloads"
 alias c="cd ~/h/code"
 alias ls="ls -A"
 
+# ZSH SCRIPTS
+alias reload-scripts="source $ALIASES_PATH"
+
+# RENAMING
+alias python=python3
+
+# EDITING
+alias edit-aliases="nv $ALIASES_PATH"
+
+# APPLICATIONS
+alias nv=/Users/marcos/h/installations/nvim-macos/bin/nvim
+
+# CONFIG EDITING
 config ()
 {
   if [[ $1 = "tmux" ]]; then
@@ -25,15 +36,4 @@ config ()
   fi
 }
 
-# ZSH SCRIPTS
-alias reload-scripts="source $ALIASES_PATH"
-
-# RENAMING
-alias python=python3
-
-# EDITING
-alias edit-aliases="nv $ALIASES_PATH"
-
-# APPLICATIONS
-alias nv=/Users/marcos/h/installations/nvim-macos/bin/nvim
 
