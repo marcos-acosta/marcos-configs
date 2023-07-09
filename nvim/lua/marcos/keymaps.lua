@@ -8,8 +8,8 @@ vim.keymap.set("", "<left>", "<nop>", {})
 vim.keymap.set("", "<right>", "<nop>", {})
 
 -- remap the key used to leave insert mode
-vim.keymap.set("i", "wq", "<Esc>", {})
-vim.keymap.set("v", "wq", "<Esc>", {})
+vim.keymap.set("i", "jk", "<Esc>", {})
+vim.keymap.set("v", "jk", "<Esc>", {})
 -- don't allow escape in insert and visual mode
 vim.keymap.set("i", "<Esc>", "<nop>", { noremap = true })
 vim.keymap.set("v", "<Esc>", "<nop>", { noremap = true })
